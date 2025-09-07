@@ -2,23 +2,36 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Github, Linkedin, Mail } from "lucide-react";
 
 const Team = () => {
+  const teamLead = {
+    name: "Ayoub Jadouli",
+    role: "Team Lead & AI Solutions Architect",
+    expertise: "Deep Learning, AgenticAI & Strategic AI Implementation",
+    image: "/api/placeholder/200/200",
+  };
+
   const teamMembers = [
     {
-      name: "Ahmed Benali",
-      role: "AI Architect",
-      expertise: "Deep Learning & Computer Vision",
+      name: "Hanane",
+      role: "ML Engineer",
+      expertise: "NLP & Computer Vision",
       image: "/api/placeholder/200/200",
     },
     {
-      name: "Fatima El-Khoury",
-      role: "ML Engineer",
-      expertise: "NLP & AgenticAI",
+      name: "Fatima Zahra",
+      role: "AI Developer",
+      expertise: "Deep Learning & Data Science",
+      image: "/api/placeholder/200/200",
+    },
+    {
+      name: "Ahmed Benali",
+      role: "AI Architect",
+      expertise: "Computer Vision & Edge AI",
       image: "/api/placeholder/200/200",
     },
     {
       name: "Youssef Mansouri",
       role: "Data Scientist",
-      expertise: "Predictive Analytics",
+      expertise: "Predictive Analytics & MLOps",
       image: "/api/placeholder/200/200",
     },
     {
@@ -39,6 +52,12 @@ const Team = () => {
       expertise: "Reinforcement Learning",
       image: "/api/placeholder/200/200",
     },
+    {
+      name: "Mohamed Rami",
+      role: "AI Engineer",
+      expertise: "LLMs & Generative AI",
+      image: "/api/placeholder/200/200",
+    },
   ];
 
   return (
@@ -53,6 +72,53 @@ const Team = () => {
           </p>
         </div>
 
+        {/* Team Lead Card */}
+        <div className="mb-12">
+          <Card className="max-w-2xl mx-auto border-primary/20 bg-gradient-to-br from-primary/5 to-primary/10 overflow-hidden">
+            <CardContent className="p-8">
+              <div className="flex flex-col md:flex-row items-center gap-6">
+                <div className="relative">
+                  <div className="w-32 h-32 bg-gradient-primary rounded-full flex items-center justify-center text-primary-foreground text-3xl font-bold">
+                    {teamLead.name.split(' ').map(n => n[0]).join('')}
+                  </div>
+                  <div className="absolute inset-0 w-32 h-32 bg-gradient-primary rounded-full opacity-30 blur-2xl" />
+                </div>
+                
+                <div className="text-center md:text-left flex-1">
+                  <h3 className="font-bold text-2xl mb-2">{teamLead.name}</h3>
+                  <p className="text-primary font-semibold text-lg mb-2">{teamLead.role}</p>
+                  <p className="text-muted-foreground mb-4">{teamLead.expertise}</p>
+                  
+                  <div className="flex justify-center md:justify-start gap-4">
+                    <a 
+                      href="#" 
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                      aria-label="LinkedIn"
+                    >
+                      <Linkedin className="w-5 h-5" />
+                    </a>
+                    <a 
+                      href="#" 
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                      aria-label="GitHub"
+                    >
+                      <Github className="w-5 h-5" />
+                    </a>
+                    <a 
+                      href="#" 
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                      aria-label="Email"
+                    >
+                      <Mail className="w-5 h-5" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Team Members Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {teamMembers.map((member, index) => (
             <Card 
