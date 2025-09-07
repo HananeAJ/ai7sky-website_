@@ -11,15 +11,15 @@ const Team = () => {
 
   const teamMembers = [
     {
-      name: "Hanane Ajaoud",
-      role: "AI Engineer",
-      expertise: "AI, Data Science, Software Develpment",
-      image: "/api/placeholder/200/200",
-    },
-    {
       name: "Fatima Zahra Belhamra",
       role: "AI Developer",
       expertise: "Software & Data Engineering",
+      image: "/api/placeholder/200/200",
+    },
+    {
+      name: "Hanane Ajaoud",
+      role: "AI Engineer",
+      expertise: "AI, Data Science, Software Development",
       image: "/api/placeholder/200/200",
     },
   ];
@@ -36,67 +36,50 @@ const Team = () => {
           </p>
         </div>
 
-        {/* Team Lead Card */}
-        <div className="mb-12">
-          <Card className="max-w-2xl mx-auto border-primary/20 bg-gradient-to-br from-primary/5 to-primary/10 overflow-hidden">
+        {/* Team Grid: Lead + Members */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Team Lead Card (larger) */}
+          <Card className="group hover:shadow-lg transition-all duration-300 border-primary/30 bg-gradient-to-br from-primary/5 to-primary/10 overflow-hidden lg:col-span-2">
             <CardContent className="p-8">
-              <div className="flex flex-col md:flex-row items-center gap-6">
-                <div className="relative">
-                  <div className="w-32 h-32 bg-gradient-primary rounded-full flex items-center justify-center text-primary-foreground text-3xl font-bold">
-                    {teamLead.name.split(' ').map(n => n[0]).join('')}
-                  </div>
-                  <div className="absolute inset-0 w-32 h-32 bg-gradient-primary rounded-full opacity-30 blur-2xl" />
+              <div className="relative mb-6 flex justify-center">
+                <div className="w-32 h-32 bg-gradient-primary rounded-full flex items-center justify-center text-primary-foreground text-3xl font-bold">
+                  {teamLead.name.split(" ").map((n) => n[0]).join("")}
                 </div>
-                
-                <div className="text-center md:text-left flex-1">
-                  <h3 className="font-bold text-2xl mb-2">{teamLead.name}</h3>
-                  <p className="text-primary font-semibold text-lg mb-2">{teamLead.role}</p>
-                  <p className="text-muted-foreground mb-4">{teamLead.expertise}</p>
-                  
-                  <div className="flex justify-center md:justify-start gap-4">
-                    <a 
-                      href="#" 
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                      aria-label="LinkedIn"
-                    >
-                      <Linkedin className="w-5 h-5" />
-                    </a>
-                    <a 
-                      href="#" 
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                      aria-label="GitHub"
-                    >
-                      <Github className="w-5 h-5" />
-                    </a>
-                    <a 
-                      href="#" 
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                      aria-label="Email"
-                    >
-                      <Mail className="w-5 h-5" />
-                    </a>
-                  </div>
-                </div>
+              </div>
+
+              <div className="text-center space-y-3">
+                <h3 className="font-semibold text-2xl">{teamLead.name}</h3>
+                <p className="text-primary font-medium text-lg">{teamLead.role}</p>
+                <p className="text-sm text-muted-foreground">{teamLead.expertise}</p>
+              </div>
+
+              <div className="flex justify-center gap-4 mt-6 pt-4 border-t border-border/50">
+                <a href="#" className="text-muted-foreground hover:text-primary transition-colors" aria-label="LinkedIn">
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a href="#" className="text-muted-foreground hover:text-primary transition-colors" aria-label="GitHub">
+                  <Github className="w-5 h-5" />
+                </a>
+                <a href="#" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Email">
+                  <Mail className="w-5 h-5" />
+                </a>
               </div>
             </CardContent>
           </Card>
-        </div>
 
-        {/* Team Members Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Team Members */}
           {teamMembers.map((member, index) => (
-            <Card 
+            <Card
               key={index}
               className="group hover:shadow-lg transition-all duration-300 border-border/50 overflow-hidden"
             >
               <CardContent className="p-6">
-                <div className="relative mb-4">
-                  <div className="w-24 h-24 mx-auto bg-gradient-primary rounded-full flex items-center justify-center text-primary-foreground text-2xl font-bold">
-                    {member.name.split(' ').map(n => n[0]).join('')}
+                <div className="relative mb-4 flex justify-center">
+                  <div className="w-24 h-24 bg-gradient-primary rounded-full flex items-center justify-center text-primary-foreground text-2xl font-bold">
+                    {member.name.split(" ").map((n) => n[0]).join("")}
                   </div>
-                  <div className="absolute inset-0 w-24 h-24 mx-auto bg-gradient-primary rounded-full opacity-20 blur-xl group-hover:opacity-30 transition-opacity" />
                 </div>
-                
+
                 <div className="text-center space-y-2">
                   <h3 className="font-semibold text-lg">{member.name}</h3>
                   <p className="text-primary font-medium">{member.role}</p>
@@ -104,25 +87,13 @@ const Team = () => {
                 </div>
 
                 <div className="flex justify-center gap-4 mt-4 pt-4 border-t border-border/50">
-                  <a 
-                    href="#" 
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                    aria-label="LinkedIn"
-                  >
+                  <a href="#" className="text-muted-foreground hover:text-primary transition-colors" aria-label="LinkedIn">
                     <Linkedin className="w-4 h-4" />
                   </a>
-                  <a 
-                    href="#" 
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                    aria-label="GitHub"
-                  >
+                  <a href="#" className="text-muted-foreground hover:text-primary transition-colors" aria-label="GitHub">
                     <Github className="w-4 h-4" />
                   </a>
-                  <a 
-                    href="#" 
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                    aria-label="Email"
-                  >
+                  <a href="#" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Email">
                     <Mail className="w-4 h-4" />
                   </a>
                 </div>
