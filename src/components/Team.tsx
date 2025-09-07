@@ -11,51 +11,15 @@ const Team = () => {
 
   const teamMembers = [
     {
-      name: "Hanane",
-      role: "ML Engineer",
-      expertise: "NLP & Computer Vision",
-      image: "/api/placeholder/200/200",
-    },
-    {
-      name: "Fatima Zahra",
-      role: "AI Developer",
-      expertise: "Deep Learning & Data Science",
-      image: "/api/placeholder/200/200",
-    },
-    {
-      name: "Ahmed Benali",
-      role: "AI Architect",
-      expertise: "Computer Vision & Edge AI",
-      image: "/api/placeholder/200/200",
-    },
-    {
-      name: "Youssef Mansouri",
-      role: "Data Scientist",
-      expertise: "Predictive Analytics & MLOps",
-      image: "/api/placeholder/200/200",
-    },
-    {
-      name: "Amina Bouaziz",
-      role: "AI Developer",
-      expertise: "Crypto Trading Algorithms",
-      image: "/api/placeholder/200/200",
-    },
-    {
-      name: "Omar Khalil",
-      role: "Full Stack AI Engineer",
-      expertise: "AI Integration & APIs",
-      image: "/api/placeholder/200/200",
-    },
-    {
-      name: "Sara Benhadid",
-      role: "Research Lead",
-      expertise: "Reinforcement Learning",
-      image: "/api/placeholder/200/200",
-    },
-    {
-      name: "Mohamed Rami",
+      name: "Hanane Ajaoud",
       role: "AI Engineer",
-      expertise: "LLMs & Generative AI",
+      expertise: "AI, Data Science, Software Develpment",
+      image: "/api/placeholder/200/200",
+    },
+    {
+      name: "Fatima Zahra Belhamra",
+      role: "AI Developer",
+      expertise: "Software & Data Engineering",
       image: "/api/placeholder/200/200",
     },
   ];
