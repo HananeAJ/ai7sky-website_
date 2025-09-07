@@ -11,15 +11,15 @@ const Team = () => {
 
   const teamMembers = [
     {
-      name: "Fatima Zahra Belhamra",
+      name: "Hanane Ajaoud",
       role: "AI Engineer",
-      expertise: "Software & Data Engineering",
+      expertise: "AI, Data Science, Software Develpment",
       image: "/api/placeholder/200/200",
     },
     {
-      name: "Hanane Ajaoud",
+      name: "Fatima Zahra Belhamra",
       role: "AI Developer",
-      expertise: "AI, Data Science, Software Develpment",
+      expertise: "Software & Data Engineering",
       image: "/api/placeholder/200/200",
     },
   ];
@@ -82,12 +82,12 @@ const Team = () => {
           </Card>
         </div>
 
-        {/* Team Members Cards Centered */}
-        <div className="flex flex-wrap justify-center gap-6">
+        {/* Team Members Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {teamMembers.map((member, index) => (
             <Card 
               key={index}
-              className="w-72 group hover:shadow-lg transition-all duration-300 border-border/50 overflow-hidden"
+              className="group hover:shadow-lg transition-all duration-300 border-border/50 overflow-hidden"
             >
               <CardContent className="p-6">
                 <div className="relative mb-4">
