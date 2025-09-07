@@ -11,15 +11,15 @@ const Team = () => {
 
   const teamMembers = [
     {
-      name: "Hanane Ajaoud",
-      role: "AI Engineer",
-      expertise: "AI, Data Science, Software Develpment",
-      image: "/api/placeholder/200/200",
-    },
-    {
       name: "Fatima Zahra Belhamra",
       role: "AI Developer",
       expertise: "Software & Data Engineering",
+      image: "/api/placeholder/200/200",
+    },
+    {
+      name: "Hanane Ajaoud",
+      role: "AI Engineer",
+      expertise: "AI, Data Science, Software Develpment",
       image: "/api/placeholder/200/200",
     },
   ];
